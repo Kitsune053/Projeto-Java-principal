@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Academia</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #f8f9fa;
+       }
+
+       header {
+           background-color: #fff;
+           color: #333;
+           padding: 20px 20px 10px;
+           text-align: center;
+           border-bottom: 1px solid #e7e7e7;
+           position: relative;
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       }
+
+       .logo {
+           position: absolute;
+           top: 10px;
+           left: 20px;
+           font-size: 1.5rem;
+           font-weight: bold;
+           color: #007bff;
+       }
+
+       h1 {
+           margin: 0;
+           padding: 20px 0 10px;
+           font-size: 2rem;
+           color: #333;
+       }
+
+       nav {
+           margin-top: 10px;
+       }
+
+       nav ul {
+           list-style: none;
+           padding: 0;
+           margin: 0;
+           display: flex;
+           justify-content: center;
+       }
+
+       nav ul li {
+           margin: 0 15px;
+       }
+
+       nav ul li a {
+           color: #333;
+           text-decoration: none;
+           transition: color 0.3s ease;
+           font-size: 1rem;
+           font-weight: 500;
+       }
+
+       nav ul li a:hover {
+           color: #007bff;
+       }
+
+       section {
+           padding: 40px 20px;
+       }
+
+       .class, .info-box {
+           margin-bottom: 30px;
+           padding: 20px;
+           background-color: #fff;
+           border-radius: 10px;
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       }
+
+       h2, h3 {
+           margin-bottom: 20px;
+           color: #333;
+           transition: color 0.3s ease;
+       }
+
+       h2:hover, h3:hover {
+           color: #007bff;
+       }
+
+       .btn-primary {
+           background-color: #007bff;
+           border-color: #007bff;
+       }
+
+       .btn-primary:hover {
+           background-color: #0056b3;
+           border-color: #0056b3;
+       }
+
+       footer {
+           background-color: #fff;
+           color: #333;
+           text-align: center;
+           padding: 20px 10px;
+           position: fixed;
+           bottom: 0;
+           width: 100%;
+           border-top: 1px solid #e7e7e7;
+           box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+       }
+
+       /* Estilo para centralizar a frase "Nossos Treinamentos" */
+       #classes h2 {
+           text-align: center;
+       }
+   </style>
+<body>
+<header>
+   <div class="logo">REIS CORP</div>
+   <h1 class="animate__animated animate__fadeInDown">Bem-vindo à Academia Fitness</h1>
+   <nav>
+       <ul>
+           <li><a href="#home" class="animate__animated animate__fadeIn">Home</a></li>
+           <li><a href="#classes" class="animate__animated animate__fadeIn">Treinamento</a></li>
+           <li><a href="#about" class="animate__animated animate__fadeIn">Sobre</a></li>
+           <li><a href="#contact" class="animate__animated animate__fadeIn">Contato</a></li>
+       </ul>
+   </nav>
+</header>
+
+<section id="home" class="animate__animated animate__fadeIn">
+   <div class="info-box">
+       <h2>Bem-vindo à Academia Fitness</h2>
+       <p>Nós nos dedicamos a transformar vidas através do fitness. Junte-se a nós para uma jornada de saúde e bem-estar!</p>
+   </div>
+</section>
+
+<section id="classes" class="animate__animated animate__fadeIn">
+   <h2>Nossos Treinamentos</h2>
+   <div class="class">
+       <h3>Aula de Zumba</h3>
+       <p>Divirta-se dançando e queimando calorias ao som de músicas vibrantes! Nossas aulas de Zumba são pura energia e alegria!</p>
+   </div>
+   <div class="class">
+       <h3>Musculação</h3>
+       <p>Construa força e resistência com nosso programa de musculação. Equipamentos modernos e orientação profissional para você atingir seus objetivos.</p>
+   </div>
+   <div class="class">
+       <h3>Pilates</h3>
+       <p>Melhore sua flexibilidade, equilíbrio e postura com nossas aulas de Pilates. Uma prática suave e eficaz para o bem-estar do seu corpo e mente.</p>
+   </div>
+</section>
+
+<section id="about" class="animate__animated animate__fadeIn">
+   <div class="info-box">
+       <h2>Sobre Nós</h2>
+       <p>Somos uma equipe de profissionais dedicados a ajudar nossos clientes a atingirem seus objetivos de fitness.</p>
+   </div>
+</section>
+
+<section id="signup" class="animate__animated animate__fadeIn">
+   <div class="info-box">
+       <h2>Cadastre-se</h2>
+       <p>Temos tudo que você precisa para não ter mais desculpas para não treinar: nossa academia sempre está equipada com o melhor para seu treino e bem-estar, temos profissionais qualificados para
+           ajudar em seus treinos, isso e claro!, sempre com os melhores preços para você.</p>
+           <a type="button" th:href="@{/salvaralunos}" class="btn btn-primary">Cadastrar-se</a>
+       </div>
+   </section>
+   
+   <section id="contact" class="animate__animated animate__fadeIn">
+       <div class="info-box">
+           <h2>Contato</h2>
+           <p>Entre em contato conosco para saber mais sobre nossos serviços e programas.</p>
+           <p>Telefone: (61) 4002-8922-</p>
+           <p>Email: info@academiafitness.com</p>
+       </div>
+   </section>
+   
+   <footer class="animate__animated animate__fadeInUp">
+       <p>&copy; 2024 REIS CORP. Todos os direitos reservados.</p>
+   </footer>
+   </body>
+   </html>
+   
